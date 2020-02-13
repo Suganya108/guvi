@@ -1,18 +1,29 @@
 # Calculator
 
-a=int(input("Enter Value 1 : "))
-b=int(input("Enter Value 2 : "))
-print("Mul-1 , Div-2 , Add-3 , Sub-4 , mod-5 , sqr-6")
-c=int(input("Enter Your Choice : "))
-if(c==1):
-    print("Answer : ",a*b)
-elif(c==2):
-    print("Answer : ",a/b)
-elif(c==3):
-    print("Answer : ",a+b)
-elif(c==4):
-    print("Answer : ",a-b)
-elif(c==5):
-    print("Answer : ",a%b)
-elif(c==6):
-    print("Answer : ",a**b)
+num1=float(input("Enter the number1: "))
+num2=float(input("Enter the number2: "))
+ch=float(input("Enter the choice: "))
+operator=round(ch)
+print("1.Add")
+print("2.Sub")
+print("3.Mul")
+print("4.Div")
+print("5.Exp")
+print(".")
+print(".")
+if(operator==1):
+    print(num1,"+",num2,"=",num1+num2)
+elif(operator==2):
+    print(num1,"-",num2,"=",num1-num2)
+elif(operator==3):
+    print(num1,"*",num2,"=",num1*num2)
+elif(operator==4):
+    if(num2!=0):
+        print(num1,"/",num2,"=",num1/num2)
+    else:
+        print("the value of", num1,"/", num2,"is: infinity")
+elif(operator==5):
+    print(num1,"exp",num2,"=",num1**num2)
+else:
+    print("Invaild Option")
+   
