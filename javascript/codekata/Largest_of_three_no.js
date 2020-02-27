@@ -1,4 +1,4 @@
-# You are given three numbers A, B & C. Print the largest amongst these three numbers.
+// You are given three numbers A, B & C. Print the largest amongst these three numbers.
 
 const readline=require('readline');
 const inp=readline.createInterface({
