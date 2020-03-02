@@ -8,7 +8,7 @@ inp.on("line",(data)=>{
   n.push(data);});
 inp.on("close",()=>{
   var a=[];
-  a=parseInt(n[0].split(" "));
+  a=n[0].split(" ");
   if(a[0]+a[1]>a[2] && a[1]+a[2]>a[0] && a[2]+a[0]>a[1]){
     console.log("yes")}
   else{
