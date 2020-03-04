@@ -9,7 +9,7 @@ let x=parseInt(score1);
 let y=parseInt(score2);
 if(x>y){let s=x-y;alert("TEAM A WON BY "+s+" RUNS");
     document.getElementById("res").style="background-color:LightPink;";
-    document.getElementById("t").innerHTML="<h1>TEAM A WON BY ${s} RUNS</h1>"
+    document.getElementById("t").innerHTML="<h1>TEAM A WON BY </h1>" +"<h1>"+s+"</h1>"+"<h1> RUNS</h1>";
 }
 else if(x<y){let s=y-x;alert("TEAM B WON BY "+s+" RUNS");
     document.getElementById("res").style="background-color:Cyan;";
