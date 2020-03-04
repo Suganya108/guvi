@@ -15,7 +15,10 @@ class cricket{
     }
     
     play(){
-        
+        if(this.w>=10 || this.b<=0){
+            alert("Game Over");
+            return this.score;
+        }
         this.o+=1;
         let r= Math.floor(Math.random() * 7);
         document.getElementById(this.r1).value=r;
@@ -28,10 +31,6 @@ class cricket{
         this.b=parseInt(bl1)-1;
         document.getElementById(this.b1).value=this.b;
         if(this.o==6 || r==0){this.o=0;this.p+=1;}
-        if(this.w>=10 || this.b<=0){
-            alert("Game Over");
-            return this.score;
-        }
         //alert(this.score)
         
     }
