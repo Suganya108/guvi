@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>www.cricket.com</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 400px; 
+}
+* {
+  box-sizing: border-box;
+}
+
+.but {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100px;
+}
+</style>
+<script src="index.js">
+</script>
+
+</head>
+
+<body >
+<div >
+  <div style="background-color:LightPink;" class="column"><h1 align="center">TEAM A</h1><br><br>
+  <TABLE>
+  <tr>
+    <td><h2>RUN</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="r1" value="0"></h2></td></tr>
+    <td><h2>PLAYER</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="p1" value="0"></h2></td></tr>
+    <td><h2>REM BALL</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="b1" value="36"></h2></td></tr>
+    <td><h2>WICKET</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="w1" value="0"></h2></td></tr>
+    <td><h2>SCORE</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="s1" value="0"></h2></td></tr>
+    
+</TABLE>
+  </div>
+  <div style="background-color:Cyan;" class="column"><h1 align="center">TEAM B</h1><br><br>
+<TABLE>
+  <tr>
+    <td><h2>RUN</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="r2" value="0"></h2></td></tr>
+    <td><h2>PLAYER</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="p2" value="0"></h2></td></tr>
+    <td><h2>REM BALL</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="b2" value="36"></h2></td></tr>
+    <td><h2>WICKET</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="w2" value="0"></h2></td></tr>
+    <td><h2>SCORE</h2></td>
+    <td><h2>:<input type="text" style="text-align:right" id="s2" value="0"></h2></td></tr>
+    
+</TABLE></div>
+  </div><div class="">
+  <div ><input type="button" id="bt1" value="PLAY" class="but" onClick="play1()"></div>
+  <div><input type="button" id="bt2" value="PLAY" class="but" onClick="play2()"></div>
+
+</div><br><br>
+<div><h1 align="center"><a href="result.html"> SUBMIT </a></h1></div>
+
+</body>
+</html>
