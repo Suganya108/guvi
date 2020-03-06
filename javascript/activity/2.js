@@ -19,3 +19,9 @@ var primeno=a.filter(function(n){
     }
     return n!==1})
 console.log(primeno)
+//
+var a=["raja","bala","ravi","suba","sundar"];
+var ar=function(){
+    for (var i = 0; i < a.length; i++) {
+        console.log(a[i][0].toUpperCase()+ a[i].substr(1));
+    }}
