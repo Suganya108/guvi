@@ -6,5 +6,5 @@ var a=[1,2,4,5,2,8,9];
 var a=["raja","bala","ravi","suba","sundar"];
 (function(){
     for (var i = 0; i < a.length; i++) {
-        console.log(arr[i][0].toUpperCase()+ arr[i].substr(1));
+        console.log(a[i][0].toUpperCase()+ a[i].substr(1));
     }})();
