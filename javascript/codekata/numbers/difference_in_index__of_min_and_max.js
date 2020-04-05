@@ -1,5 +1,5 @@
 /* You are given with an array of numbers, Your task is to print the difference 
-of indices of largest and smallest number.All number are unique. /
+of indices of largest and smallest number.All number are unique. */
 
 const readline=require('readline');
 const inp=readline.createInterface({
