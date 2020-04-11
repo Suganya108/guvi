@@ -1,5 +1,5 @@
 /* Given a string 'S' and a character 'K', find how many times 
-'K' got repeated in 'S'.If 'K' is not found in 'S' print -1 /
+'K' got repeated in 'S'.If 'K' is not found in 'S' print -1 */
 
 const readline=require('readline');
 const inp=readline.createInterface({
