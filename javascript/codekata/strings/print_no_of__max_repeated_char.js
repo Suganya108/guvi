@@ -1,5 +1,5 @@
 /* Given a string S,count the maximum number of times a character
-repeated in the string.If no character is repeated print '0'. /
+repeated in the string.If no character is repeated print '0'. */
 
 const readline=require('readline');
 const inp=readline.createInterface({
