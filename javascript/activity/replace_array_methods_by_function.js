@@ -1,65 +1,95 @@
-var a=[1,2,3,4,5,6,7,8,9,10];
-  
-  // findIndex()
-  
-  function index(b){
-      for(var i=0;i<a.length;i++){
-          if(b===a[i]){
-              break;
-          }
-      }
-      return i;
+// some() any array element is a multipleof given number
+
+const mysome = (array, callback) => {
+   for (let i=0; i < array.length; i++){
+    if(callback(array[i])){
+      return true
+    }
   }
-  console.log(index(5));
-  
-  // concat()
-  
-  function concat(s1,s2,m){
-      return s1+m+s2;
+  return false
+}
+
+const predicat = (x) => x.length >3
+
+const data = ['apple','bat','cat']
+
+mysome(data, predicat)===data.some(predicat)
+
+// every()
+
+const myevery = (array, callback) => {
+  let c = 0
+   for (let i=0; i < array.length; i++){
+    if(callback(array[i])){
+      c+=1
+    }
   }
-  console.log(concat("cat","dog",","));
-  
-  // sum()
-  
-  function sum(a){
-      var s=0;
-      for(var i=0;i<a.length;i++){
-          s+=a[i];
-      }
-      return s;
+  if(c===array.length)return true
+  return false
+}
+
+const predicat = (x) => x.length >3
+
+const data = ['apple','bat','cat']
+
+myevery(data, predicat)===data.every(predicat)
+
+// concat() join two array elements to one
+
+const concat = (array1, array2) => {
+  return [...array1,...array2]
+}
+
+const result=concat([1,2,3], [4,5,6])
+console.log(result)
+
+// indexof()
+
+const index = (array, value) => {
+    var c=-1
+  for (let i=0; i < array.length; i++){
+      c+=1;
+    if(array[i]===value){
+      return c
+    }
   }
-  console.log(sum(a));
-  
-  // map() mul by 3
-  
-  function map(x){
-      for(var i=0;i<a.length;i++){
-          a[i]=a[i]*x;
-      }
-      return a;
+  return -1
+}
+
+const result=index([1,2,3], 4)
+console.log(result)
+
+// map()
+
+const mymap = (array, callback) => {
+  let newArray = []
+   for (let i=0; i < array.length; i++){
+    
+      newArray.push(callback(array[i]))
+    
   }
-  console.log(map(3));
-  
-  // filter() even no. in array
-  
-  function filter(a){
-      var f=[];
-      for(var i=0;i<a.length;i++){
-          if(a[i]%2===0)f.push(a[i]);
-      }
-      return f;
+  return newArray
+}
+
+const predicat = (x) => x * 2
+
+const data = [1,2,3, 4, 5, 6]
+
+mymap(data, predicat) == data.map(predicat)
+
+// filter()
+
+ myfilter = (array, callback) => {
+  let newArray = []
+   for (let i=0; i < array.length; i++){
+    if(callback(array[i])){
+      newArray.push(array[i])
+    }
   }
-  console.log(filter(a));
-  
-  // every() element is even
-  
-  function every(x){
-      var e=1;
-      for(var i=0;i<a.length;i++){
-          if(a[i]%x===0)e*=1;
-          else e*=0;
-      }
-      if(e===1)return true;
-      else return false;
-  }
-  console.log(every(2));
+  return newArray
+}
+
+const predicat = (x) => x.length >3
+
+const data = ['apple','bat','cat']
+myfilter(data, predicat)===data.filter(predicat)
