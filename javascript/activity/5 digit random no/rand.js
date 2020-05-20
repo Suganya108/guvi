@@ -3,7 +3,7 @@ var b = document.createElement('button');
 b.id = 'b1'
 b.style.width = '10%';
 b.style.height = '30px';
-b.innerHTML = 'Random';
+b.innerHTML = 'Submit';
 b.style.align = 'center';
 b.style.backgroundColor = 'pink';
 body.appendChild(b);
