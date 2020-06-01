@@ -1,5 +1,7 @@
 // 1. Convert specifications given below in image to Javascript Object;
 
+//Creating TechnicalSpecification as Javascript Object to store given data in the image.
+
 var TechnicalSpecification = {
     Dimensions:{
         OverallLength:3500,
