@@ -96,3 +96,124 @@ var addCatFriendsActivities=function(activity1,activity2){
 }
 //call function addCatFriendsActivities
 addCatFriendsActivities("play","eat");
+
+//8.Update the fur color of bar
+
+//function to update fur color of bar
+var updateFurColor=function(color){
+    cat["furcolor"]=color
+    console.log(cat.furcolor);
+};
+//cal function updateFurColor
+updateFurColor("bar");
+console.log(cat);
+
+//Problem 0 : Part B
+
+var myCar = {
+ make: 'Bugatti',
+ model: 'Bugatti La Voiture Noire',
+ year: 2019,
+ accidents: [
+ {
+ date: '3/15/2019',
+ damage_points: '5000',
+ atFaultForAccident: true
+ },
+ {
+ date: '7/4/2022',
+ damage_points: '2200',
+ atFaultForAccident: true
+ },
+ {
+ date: '6/22/2021',
+ damage_points: '7900',
+ atFaultForAccident: true
+ }
+ ]
+}
+
+//1. Loop over the accidents array. Change atFaultForAccident from true to false.
+
+//function to change atFaultForAccident from true to false.
+function changeAtFaultForAccident(){
+    for(var i=0;i<myCar.accidents.length;i++){
+        myCar.accidents[i].atFaultForAccident=false;
+    }
+    console.log(myCar.accidents)
+}
+//call function changeAtFaultForAccident
+changeAtFaultForAccident();
+
+//2. Print the dated of my accidents
+
+//function to print accidents dates
+function printDateOfAccidents(){
+    for(var i=0;i<myCar.accidents.length;i++){
+    console.log(myCar.accidents[i].date);
+    }
+}
+////call function printDateOfAccidents
+printDateOfAccidents();
+
+//Problem 1
+
+//Write a function called “printAllValues” which returns an newArray of all the input object’s values.
+
+var obj = {name : 'RajiniKanth', age : 33, hasPets : false};
+//function to return a new array of input object values
+function printAllValues(obj) {
+    var newArray=[];
+    for(var i in obj){
+        newArray.push(obj[i]);
+    }
+    return newArray;
+}
+//print return value of function printAllValues
+console.log(printAllValues(obj));
+
+//Problem 2
+
+//Write a function called “printAllKeys” which returns an newArray of all the input object’s keys.
+
+var obj = {name : 'RajiniKanth', age : 25, hasPets : true};
+//function to return a new array of input object keys
+function printAllKeys(obj) {
+    var newArray=[];
+    for(var i in obj){
+        newArray.push(i);
+    }
+    return newArray;
+}
+//print return value of function printAllKeys
+console.log(printAllKeys(obj));
+
+//Problem 3
+
+//Write a function called “convertObjectToList” which converts an object literal into an array of arrays.
+
+var obj = {name : 'ISRO', age : 35, role: 'Scientist'};
+//function to return a new array  converts an object literal into an array of arrays
+function convertListToObject(obj) {
+    var newArray=[];
+    for(var i in obj){
+        newArray.push([i,obj[i]]);
+    }
+    return newArray;
+}
+//print return value of function convertListToObject
+console.log(convertListToObject(obj));
+
+//Problem 4
+
+//Write a function ‘transformFirstAndLast’ that takes in an array, and returns an object
+
+var arr = ['GUVI', 'I', 'am', 'Geek'];
+//function to convert array first element into key and last element to value of an object
+function transformFirstAndLast(arr) {
+    var object={}
+    object[arr[0]]=arr[arr.length-1];
+    return object;
+}
+//print return value of function transformFirstAndLast
+console.log(transformFirstAndLast(arr));
