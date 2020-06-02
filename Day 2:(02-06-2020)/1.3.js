@@ -1,3 +1,5 @@
+//1.3 Extract and print all the country name with alpha3Code and population in console.
+
 var request = new XMLHttpRequest() //object to request Http connection
     //To set api connection true
 request.open('GET', 'https://restcountries.eu/rest/v2/all', true)
