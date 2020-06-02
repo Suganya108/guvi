@@ -1,3 +1,5 @@
+//1.1 Extract and print all the country name with the flag URL in console
+
 var request = new XMLHttpRequest() //object to request Http connection
 //To set api connection true
 request.open('GET', 'https://restcountries.eu/rest/v2/all', true)
