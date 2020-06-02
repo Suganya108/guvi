@@ -253,3 +253,61 @@ function transformGeekData(arr) {
 }
 //print return value of function transformGeekData
 console.log(transformGeekData(arr));
+
+//Problem 7
+
+var expected = {foo: 5, bar: 6};
+var actual = {foo: 5, bar: 6}
+//function to detects that two objects are equal
+function assertObjectsEqual(actual, expected, testName){
+var flag=1;
+ for(var i in expected){
+     if(expected[i]===actual[i])flag*=1;
+     else flag*=0;
+ }
+ if(flag===1)console.log("Passed");
+ else{
+     console.log("FAILED [my test] Expected ",expected,"but got", actual);
+ }
+}
+//call function assertObjectsEqual
+assertObjectsEqual(actual, expected, 'detects that two objects are equal');
+
+//Problem 8
+
+/*I have a mock data of security Questions and Answers. You function
+should take the object and a pair of strings and should return if the
+quest is present and if its valid answer
+*/
+var securityQuestions = [
+ {
+ question: "What was your first pet’s name?",
+ expectedAnswer: "FlufferNutter"
+ },
+ {
+ question: "What was the model year of your first car?",
+ expectedAnswer: "1985"
+ },
+ {
+ question: "What city were you born in?",
+ expectedAnswer: "NYC"
+ }
+]
+//function to check security Questions and Answers
+function chksecurityQuestions(securityQuestions,ques,ans) {
+    for(var i=0;i<securityQuestions.length;i++){
+        if(securityQuestions[i].question===ques && securityQuestions[i].expectedAnswer===ans)return true;
+        else return false;
+    }
+
+}
+//Test case1:
+var ques = "What was your first pet’s name?";
+var ans  =  "FlufferNutter";
+var status = chksecurityQuestions(securityQuestions, ques, ans);
+console.log(status); // true
+//Test case2:
+var ques = "What was your first pet’s name?";
+var ans  =  "DufferNutter";
+var status = chksecurityQuestions(securityQuestions, ques, ans);
+console.log(status); // flase
