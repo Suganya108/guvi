@@ -217,3 +217,39 @@ function transformFirstAndLast(arr) {
 }
 //print return value of function transformFirstAndLast
 console.log(transformFirstAndLast(arr));
+
+//Problem 5
+
+/*Write a function “fromListToObject” which takes in an array of arrays, and
+returns an object with each pair of elements in the array as a key-value pair.*/
+
+var arr = [['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]];
+//function to convert subarray first element into key and second element to value of an object
+function fromListToObject(arr) {
+    var object={}
+    for(var i=0;i<arr.length;i++)
+    object[arr[i][0]]=arr[i][1];
+    return object;
+}
+//print return value of function fromListToObject
+console.log(fromListToObject(arr));
+
+//Problem 6
+
+//Write a function called “transformGeekData” that transforms some set of data from one format to another.
+
+var arr = [[['firstName', 'Vasanth'], ['lastName', 'Raja'], ['age', 24], ['role', 'JSWizard']], [['firstName', 'Sri'], ['lastName', 'Devi'], ['age', 28], ['role', 'Coder']]];
+//function to convert subarray first element into key and second element to value of an object
+function transformGeekData(arr) {
+    var object=[];
+    for(var i=0;i<arr.length;i++){
+    var subObject={};
+    for(var j=0;j<arr[i].length;j++){
+    subObject[arr[i][j][0]]=arr[i][j][1];
+    }
+    object.push(subObject);
+    }
+    return object;
+}
+//print return value of function transformGeekData
+console.log(transformGeekData(arr));
