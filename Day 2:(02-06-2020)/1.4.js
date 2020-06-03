@@ -13,7 +13,7 @@ request.onload = function() {
     // Map Function to extract countries names , borders sharing count and borders sharing
 
     const conCapital = jsonData.map((item) => {
-        console.log(item.name, "shares its border with", item.borders.length, "countries that includes", item.borders);
+        console.log(item.name, "shares its border with", item.borders.length, 'countries that includes ( "' + item.borders.join('" , "'), '" )');
     });
 
 }
