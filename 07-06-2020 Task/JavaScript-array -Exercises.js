@@ -111,3 +111,71 @@ dropRight([1,  2,  3],  5);
 
 drop([1,  2,  3],  0);
 // => [1, 2, 3]
+
+//8 - flattenDeep
+
+//Recursively flattens array.
+
+// Function to return the new flattened array.
+
+function flattenDeep(array) {
+  const stack = [...array];
+  const newArray = [];
+  while(stack.length) {
+    const next = stack.pop();
+    if(Array.isArray(next)) {
+      stack.push(...next);
+    } else {
+      newArray.push(next);
+    }
+  }
+  return newArray.reverse();
+}
+
+console.log(flattenDeep([1, [2, [3, [4]],  5]]));
+// => [1, 2, 3, 4, 5]
+
+//9 - flattenDepth
+
+//Recursively flatten array up to depth times.
+
+// Function to return the new flattened array.
+
+function flattenDepth(array,n) {
+    var i=0;
+    while(i<n){
+        var newArray=array.reduce((acc, val) => acc.concat(val), []);
+        array=newArray;
+        i+=1;
+    }
+  console.log(newArray)
+  return newArray;
+}
+
+var array = [1, [2, [3, [4]],  5]];
+
+flattenDepth(array,  1);
+// => [1, 2, [3, [4]], 5]
+
+flattenDepth(array,  2);
+// => [1, 2, 3, [4], 5]
+
+//10 - fromPairs
+
+//this method returns an object composed from key-value pairs.
+
+
+// Function to return the new object.
+
+function fromPairs(array) {
+    var i=0,object={};
+    while(i<array.length){
+        object[array[i][0]]=array[i][1];
+        i+=1;
+    }
+  console.log(object)
+  return object;
+}
+
+fromPairs([['a', 1], ['b', 2]]);
+// => { 'a': 1, 'b': 2 }
