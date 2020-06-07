@@ -112,6 +112,59 @@ dropRight([1,  2,  3],  5);
 drop([1,  2,  3],  0);
 // => [1, 2, 3]
 
+//6 - dropWhile
+
+/*Creates a slice of array excluding elements dropped from the end. Elements
+are dropped until predicate returns falsey. The predicate is invoked with
+three arguments: (value, index, array).
+*/
+
+// Function to return the slice of array.
+
+function dropRightWhile(array,fun=null) {
+    var i=0,object=[];
+    while(i<array.length){
+        if(fun)object.push(array[i]);
+        i+=1;
+    }
+  console.log(object)
+  return object;
+}
+
+dropRightWhile([1,2,3,4,5])
+// => []
+
+dropRightWhile([1,2,3,4,5], (value, index, array) => value % 2 === 0)
+// => [1, 3, 5]
+
+//7 - findLastIndex
+
+/*This method is like Array.prototype.findIndex except that it iterates over
+elements of collection from right to left.
+*/
+
+// Function to return the index of the found element, else -1.
+
+function findLastIndex(array,fun=null) {
+    var i=0,object=[];
+    while(i<array.length){
+        if(fun===true)object.push(array[i]);
+        i+=1;
+    }
+    if(fun===null)object=array;
+  console.log(object.length)
+  return object.length;
+}
+
+findLastIndex([5, 12, 6, 130, 8])
+// => 4
+
+findLastIndex([1,2,3,4,5], (value, index, array) => value % 2 === 0)
+// => 3
+
+findLastIndex([1,2,3,4], (value, index, array) => value + value === 10)
+// => -1
+
 //8 - flattenDeep
 
 //Recursively flattens array.
